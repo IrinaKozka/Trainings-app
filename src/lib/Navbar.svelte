@@ -2,7 +2,7 @@
       const navs = [
         {
             title: "Home",
-            href: "/",
+            href: "/home",
         },
                 {
             title: "About",
