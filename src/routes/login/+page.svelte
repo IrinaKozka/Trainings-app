@@ -70,6 +70,7 @@
     top: 5%;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.96);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
     .form {

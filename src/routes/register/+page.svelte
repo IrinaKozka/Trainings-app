@@ -1,5 +1,6 @@
 <script>
-  
+  import { navigate } from "svelte-routing";
+
   export let user = {
   email: '',
   password: '',
@@ -10,12 +11,24 @@
 };
 
     async function handleRegistration() {
-    try {
-      await createUser(email, password);
-      console.log('User has been register');
-    } catch (error) {
-      console.log('There was an error while registering', error);
+  try {
+    const response = await fetch('/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    });
+
+    if (response.ok) {
+        navigate('/login');
+        alert('Registration successful. Please log in to continue.');
+    } else {
+      console.log('There was an error while registering');
     }
+  } catch (error) {
+    console.log('There was an error while registering', error);
+  }
   }
 
   function handleRoleChange(event) {
