@@ -1,5 +1,4 @@
 <div class="container">
-<img src="/code-big.jpg" alt="programming, code">
 </div>
 
                <h2><br>WELCOME IN TRAININGS </h2>
